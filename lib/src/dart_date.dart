@@ -7,9 +7,6 @@ class Interval {
   late final Duration _duration;
 
   Interval(DateTime start, DateTime end) {
-    if (start.isAfter(end)) {
-      throw RangeError('Invalid Range');
-    }
     _start = start;
     _duration = end.difference(start);
   }
@@ -57,7 +54,7 @@ class Interval {
         return Interval(other.start, end);
       } else if (other.end.isAfter(start) ||
           other.end.isAtSameMomentAs(start)) {
-        return Interval(other.start, end);
+        return Interval(other.end, start);
       } else {
         throw RangeError('Error this: $this; other: $other');
       }
