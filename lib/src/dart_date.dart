@@ -50,7 +50,7 @@ class Interval {
 
   Interval intersection(Interval other) {
     if (cross(other)) {
-      if (start.isBefore(other.start) {
+      if (start.isBefore(other.start)) {
         return Interval(start, other.start);
       } else if (start.isAfter(other.start) && start.isBefore(other.end)) {
         return Interval(start, other.end);
