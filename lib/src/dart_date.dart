@@ -116,7 +116,7 @@ class Interval {
 
 const int MILLISECONDS_IN_WEEK = 604800000;
 
-extension Date on DateTime {
+extension DartDateX on DateTime {
   /// Number of seconds since epoch time / A.K.A Unix timestamp
   ///
   /// The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of
